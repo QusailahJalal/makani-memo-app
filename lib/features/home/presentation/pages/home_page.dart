@@ -9,7 +9,7 @@ import '../../../quran/presentation/bloc/quran_bloc.dart';
 import '../../../quran/presentation/bloc/quran_state.dart';
 import '../../../goals/presentation/bloc/goal_bloc.dart';
 import '../../../goals/presentation/bloc/goal_state.dart';
-import '../../../../core/widgets/progress_ring.dart';
+import '../../../../core/widgets/widgets.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

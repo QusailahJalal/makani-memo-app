@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/theme/app_theme.dart';
@@ -11,13 +12,17 @@ import 'features/quran/presentation/bloc/quran_event.dart';
 import 'features/goals/presentation/bloc/goal_bloc.dart';
 import 'features/goals/presentation/bloc/goal_event.dart';
 
-// Main Screen
-import 'features/main/presentation/pages/main_screen.dart';
+// Splash Screen
+import 'features/splash/presentation/pages/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await di.init();
-  runApp(const MakaniMemoApp());
+  runApp(DevicePreview(
+    builder: (context) {
+      return const MakaniMemoApp();
+    }
+  ));
 }
 
 class MakaniMemoApp extends StatelessWidget {
@@ -42,7 +47,7 @@ class MakaniMemoApp extends StatelessWidget {
         locale: const Locale('ar'),
         builder: (context, child) =>
             Directionality(textDirection: TextDirection.rtl, child: child!),
-        home: const MainScreen(),
+        home: const SplashScreen(),
       ),
     );
   }

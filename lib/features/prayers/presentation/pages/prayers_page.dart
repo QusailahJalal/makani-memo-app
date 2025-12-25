@@ -6,7 +6,7 @@ import '../bloc/prayer_bloc.dart';
 import '../bloc/prayer_event.dart';
 import '../bloc/prayer_state.dart';
 import '../widgets/prayer_card.dart';
-import '../../../../core/widgets/progress_ring.dart';
+import '../../../../core/widgets/widgets.dart';
 
 /// شاشة تتبع الصلوات
 class PrayersPage extends StatelessWidget {
